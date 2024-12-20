@@ -1,0 +1,28 @@
+#include<stdio.h>
+int sum(int num1,int num2)
+{
+	int sum;
+	sum=num1+num2;
+	return sum;
+}
+int main()
+{
+	printf("请输入小美的成绩和附加分");
+	int a1,a2,a3,a4;
+	scanf("%d %d",&a1,&a2);
+	int score1=sum(a1,a2);
+	printf("请输入小丽的成绩和附加分");
+	scanf("%d %d",&a3,&a4);
+	int score2=sum(a3,a4);
+	if(score1>score2){
+		printf("小美更牛逼");//TODO
+	}
+	else if(score1<score2){
+		printf("小丽更牛逼");//TODO
+	}
+	else
+	{
+		printf("两个人一样牛逼");
+	}
+	return 0;
+}

@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+
+int main()
+{
+int arr[10]={0};
+	int len=sizeof(arr)/sizeof(int);
+	int ran;
+	int sum=0;
+	int n=0;
+	srand(time(NULL));
+	
+	for(int i=0;i<len;i++){
+		ran = rand()%100+1;
+		arr[i]=ran;
+		
+	}
+	for(int i=0;i<len;i++){
+		
+		sum+=arr[i];
+	
+	}
+		printf("%d\n",sum);
+	double average=sum/len;
+	printf("%f\n",average);
+	for(int i=0;i<len;i++){
+		if(arr[i]<average){
+			n++;
+		}
+	}
+	printf("%d\n",n);
+	return 0;
+	
+}

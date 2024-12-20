@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+	int n;
+	
+	printf("你要计算几个数字的平均数？");
+	scanf("%d",&n);
+	if(n<=0){
+		printf("请输入正整数");
+		return 1;
+		//TODO
+	}
+	float number;
+	float sum=0.0;
+
+	for(int i=1;i<=n;i++){
+		printf("请输入第%d个数字",i);
+		scanf("%f",&number);
+		sum+=number;
+		//TODO
+	}
+	float average=sum/n;
+	printf("这%d个数字的平均数是%.2f",n,average);
+	return 0;
+	
+}

@@ -1,0 +1,62 @@
+//插入数组
+void add(int arr[],int arr1[],int n,int indes,int len);
+void valuedelete(int arr[],int arr1[],int n,int len);
+void indexdelete(int arr[],int arr1[],int indes,int len);
+#include<stdio.h>
+int main()
+{
+int arr[] = {13,56,78,46,89};
+		printf("你要怎么样删除\n1.value\n2.index");
+	int choice = 0;
+	scanf("%d",&choice);
+
+	int len = sizeof(arr)/sizeof(int);
+	int arr1[len-1];
+	int n;
+	switch (choice) {
+	case 1:
+		printf("你要删除那个数字");
+			scanf("%d",&n);
+			valuedelete(arr,arr1,n,len);
+		for(int i=0;i<=len-1;i++){
+			printf("%d ",arr1[i]);
+		}
+	//TODO
+		break;
+	case 2:
+		int indes;
+		printf("你要插入到第几个数字");
+		scanf("%d",&indes);//TODO
+		indexdelete(arr,arr1,indes,len);
+			for(int i=0;i<=len-1;i++){
+				printf("%d ",arr1[i]);
+			}
+		break;
+	
+	}
+	return 0;
+
+
+}
+void valuedelete(int arr[],int arr1[],int n,int len){
+	int flag =0;
+	int j = 0;
+	for(int i=0;i<len;i++){
+		if(arr[i]!=n){
+			arr1[j] = arr[i];
+			j++;
+		}else{
+			flag = 1;
+		}
+	}
+	if(!flag)printf("error");
+}
+void indexdelete(int arr[],int arr1[],int indes,int len){
+	int index = indes-1;
+	for(int j=0;j<index;j++){
+		arr1[j] = arr[j];
+	}
+	for(int k=index;k<len-1;k++){
+		arr1[k] = arr[k+1]; 
+	}
+}

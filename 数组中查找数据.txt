@@ -1,0 +1,25 @@
+
+#include<stdio.h>
+
+int printarr(int len,int num,int arr[]);
+int main()
+{
+	int num =11;
+	
+	int arr[]={22,44,77,96,10};
+	int len=sizeof(arr)/sizeof(int);
+	int n=printarr (len,num,arr);
+	printf("%d",n);
+	
+	return 0;
+}
+int printarr(int len,int num,int arr[]){
+	for(int i=0;i<len;i++){
+		if(arr[i]==num)
+		{
+			return i;
+		}
+		
+		
+	}
+}

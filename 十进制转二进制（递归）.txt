@@ -1,0 +1,14 @@
+#include<stdio.h>
+void shi_to_binary(int n);
+
+int main(){
+	int n=19;
+	shi_to_binary(n);
+	return 0;
+}
+void shi_to_binary(int n){
+	if(n>1){
+	shi_to_binary(n/2);	
+	}
+	printf("%d",n%2);
+}

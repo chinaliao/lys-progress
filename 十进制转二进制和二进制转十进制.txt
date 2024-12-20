@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<math.h>
+void shi_to_er(int n);
+void er_to_shi(int n);
+
+int main()
+{
+	int n=10011;
+	er_to_shi( n);
+	n=19;
+	shi_to_er(n);
+	return 0;
+}
+void er_to_shi(int n){
+	int a=0;
+	int res=0;
+	while(n!=0){
+	
+	
+	int i=n%10;
+	n/=10;
+	res += i*pow(2,a);
+	a++;
+	}
+	printf("%d\n",res);
+}
+void shi_to_er(int n){
+	if(n>1){
+	shi_to_er(n/2);
+	
+	}
+	printf("%d",n%2);
+}

@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{   int num1,num2,n=0;
+	scanf("%d %d",&num1,&num2);
+    for(int i=num1;i<=num2;i++){
+	if(i%6==0&&i%8==0){
+		n++;//TODO
+	}	//TODO
+	}
+
+	printf("%d和%d之间满足的数字有%d个",num1,num2,n);
+	
+	
+	return 0;
+}
